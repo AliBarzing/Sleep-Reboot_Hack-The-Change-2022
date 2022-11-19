@@ -12,7 +12,7 @@ def chang_pass(request):
 
 
 def complete_info(request):
-    return render(request, 'register3.html')
+    return render(request, 'register4.html')
 
 
 def changepassword(request):
@@ -34,8 +34,10 @@ def complite(request):
     inputs = request.get_full_path()
     values = inputs.split('?')[1].split('&')
     userObj = user.objects.filter(username=request.COOKIES.get('user'))[0]
-    # userObj.firstname = values[0].split('=')[1]
-    # userObj.lastname = values[1].split('=')[1]
-    # userObj.country = values[2].split('=')[1]
-    # userObj.save()
+    userObj.firstname = values[0].split('=')[1]
+    userObj.lastname = values[1].split('=')[1]
+    userObj.country = values[2].split('=')[1]
+    userObj.car = values[3].split('=')[1]
+    print(userObj.car)
+    userObj.save()
     return redirect('main_page')
