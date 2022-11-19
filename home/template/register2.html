@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{% static './css/mystyleRegister.css' %}">
+
+<body>
+
+</head>
+<form action="/register/changepassword">
+  <div class="container">
+    <h1>Change Password</h1>
+    <p>Please enter new password.</p>
+    <hr>
+
+    <label for="psw"><b>Current Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw"><b>New Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repeat New Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+
+    <hr>
+
+    <div class="col" id="padding-top">
+        <input class="fb btn" type="submit" value="save">
+
+        
+    </div>
+  </div> 
+  
+  
+  
+</form>
+
+</body>
+</html>
+

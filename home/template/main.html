@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{% static './css/mystyleMain.css' %}">
+
+</head>
+<body>
+<div style="color:white" id="padding-top">
+<h2 style="text-align:center">Hi!</h2>
+<p style="text-align:center">welcome to your profile</p>
+</div>
+
+<div class="col" id="padding-top">
+        <div style="text-align:center">
+
+        <a href="{% url 'index' %}" class="fb btn"><i class="">
+          </i> Back to Main
+        </a>
+        <a href="{% url 'register:complete_info' %}" class="fb btn"><i class="">
+          </i> Complete Your Profile
+        </a>
+        <a href="{% url 'image:image_save' %}" class="fb btn"><i class="">
+          </i> Add picture
+        </a>
+        <a href="{% url 'register:chang_pass' %}" class="fb btn"><i class="">
+          </i> Change Password
+        </a> 
+        <a href="{% url 'manager:logout' %}" class="fb btn"><i class="">
+          </i> Logout
+        </a> 
+</div>
+
+</body>
+</html>
