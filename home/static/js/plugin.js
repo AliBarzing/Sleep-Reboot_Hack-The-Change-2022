@@ -1,0 +1,26 @@
+$(document).ready(function(){
+	$(".titles").hide();
+	$(".title1").show();
+    $("#button1").click(function(){
+    	$(".titles").hide();
+        $(".title1").show();
+    });
+    $("#button2").click(function(){
+    	$(".titles").hide();
+        $(".title2").show();
+    });
+    $("#button3").click(function(){
+    	$(".titles").hide();
+        $(".title3").show();
+    });
+    $("#button4").click(function(){
+    	$(".titles").hide();
+        $(".title4").show();
+    });
+    $("#button5").click(function(){
+    	$("#answer").show();
+    });
+    $("#button6").click(function(){
+        $("#answer2").show();
+    });
+});
