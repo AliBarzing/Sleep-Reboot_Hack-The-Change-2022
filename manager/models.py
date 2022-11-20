@@ -17,6 +17,24 @@ class user(models.Model):
         return 'username =' + self.username + ' password = ' + self.password + 'firstname = ' + self.firstname + 'lastname = ' + self.lastname + 'gender = '+ self.gender + 'datofbirth' + self.dateofbirth + 'educationstatus' + self.educationstatus + 'weight = ' + self.weight + 'height' + self.height
 
 
+class SB_questionnaire(models.Model):
+    def __init__(self, username) -> None:
+        self.username = username
+        self.snore = models.CharField(max_length=10)
+        self.tired = models.CharField(max_length=10)
+        self.choke = models.CharField(max_length=10)
+        self.bp = models.CharField(max_length=10)
+        self.neck = models.CharField(max_length=10)
+        self.age = models.CharField(max_length=10)
+        self.weight = models.CharField(max_length=10)
+        self.sex = models.CharField(max_length=10)
+
+    def __str__(self):
+        return 'snore =' + self.snore + ' tired = ' + \
+        self.tired + 'choke = ' + self.choke + 'bp = ' + \
+        self.bp + 'neck = ' + self.neck + 'age = ' + self.age + \
+        'weight = ' + self.weight + 'sex = ' + self.sex
+
 class Group(models.Model):
     user = models.ForeignKey(user, on_delete=models.CASCADE)
     groupName = models.CharField(max_length=40)

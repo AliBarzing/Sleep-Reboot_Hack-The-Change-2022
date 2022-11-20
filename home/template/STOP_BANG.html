@@ -4,39 +4,95 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="{% static './css/mystyleRegister.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static './css/mystyleRegister3.css' %}">
 
 <body>
 
-</head>
-<form action="/register/changepassword">
-  <div class="container">
-    <h1>Hi {{firstname}}</h1>
-    <p>According to your weight and heigth, your BMI is: {{BMI}}</p>
+<div class="container">
+  <form action="/questionnaire/sb_results">
+    <h1>Stop Bang Questionnaire</h1>
+    <p>Let's answer the questions below:</p>
     <hr>
 
-    <label for="psw"><b>Current Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <label for="psw"><b>New Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <label for="psw-repeat"><b>Repeat New Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-
-
-    <hr>
-
-    <div class="col" id="padding-top">
-        <input class="fb btn" type="submit" value="save">
-
-        
+    <div class="row">
+      <div class="col">
+        <label for="snore">1. Do you <b>Snore Loudly</b> (loud enough to be heard through closed doors or your bed-partner elbows you for snoring at night)?</label>
+      </div>
     </div>
-  </div> 
-  
-  
-  
-</form>
+    <div class="row">
+      <div class="col-25">
+        <input type="checkbox" class="home-checkbox1" /><label for="snore_yes">Yes</label>
+      </div>
+      <div class="col-75">
+        <input type="checkbox" class="home-checkbox1" /><label for="snore_no">No</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label for="tired">2. Do you often feel <b>Tired, Fatigued, or Sleepy</b> during the daytime (such as falling asleep during driving)?</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <input type="checkbox" class="home-checkbox1" /><label for="tired_yes">Yes</label>
+      </div>
+      <div class="col-75">
+        <input type="checkbox" class="home-checkbox1" /><label for="tired_no">No</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label for="choke">3. Has anyone <b>Observed</b> you <b>Stop Breathing</b> or <b>Choking/Gasping</b> during your sleep?</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <input type="checkbox" class="home-checkbox1" /><label for="choke_yes">Yes</label>
+      </div>
+      <div class="col-75">
+        <input type="checkbox" class="home-checkbox1" /><label for="choke_no">No</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label for="bp">4. Have you been treated for <b>High Blood Pressure</b>? </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <input type="checkbox" class="home-checkbox1" /><label for="bp_yes">Yes</label>
+      </div>
+      <div class="col-75">
+        <input type="checkbox" class="home-checkbox1" /><label for="bp_no">No</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label for="neck">5.	Do you have a neck size, measured around adams apple, <b>larger than 40 cm</b>? (Please refer to the following pictures)</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <input type="checkbox" class="home-checkbox1" /><label for="neck_yes">Yes</label>
+      </div>
+      <div class="col-25">
+        <input type="checkbox" class="home-checkbox1" /><label for="neck_no">No</label>
+      </div>
+      <div class="col-25">
+        <img src="../static/images/adams_apple.png" alt="Adams apple">
+      </div>
+    </div>
+
+    <hr>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
 
 </body>
 </html>
