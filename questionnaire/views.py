@@ -90,5 +90,3 @@ def ISI_results(request):
     userObj.ISI_score = score
     userObj.save()
     return redirect('questionnaire:stop_bang_refer')
-
-    # return redirect('main_page')

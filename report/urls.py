@@ -7,4 +7,6 @@ urlpatterns = [
     # new stop bang questionnaire
     url(r'^report$', report_views.report, name='report'),
 
+    url(r'^resources_refer$', report_views.resources_refer, name='resources_refer')
+
 ]

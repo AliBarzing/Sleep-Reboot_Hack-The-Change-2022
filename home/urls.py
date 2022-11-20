@@ -32,6 +32,9 @@ urlpatterns = [
     #Report page
     url(r'^report/',include('report.urls',namespace='report')),
 
+    #Resources page
+    url(r'^resources/',include('resources.urls',namespace='resources')),
+
     url(r'^recognize/(?P<img>(.)*)$', views.recognize),
 
     url(r'^train/(?P<img>(.)*)$', views.train),

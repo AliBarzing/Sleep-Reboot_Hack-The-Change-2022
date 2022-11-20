@@ -120,7 +120,7 @@ def login(request, i):
                 if users.new_user == 1:
                     r = redirect('register:complete_info')
                 else:
-                    r = redirect('manager:index')
+                    r = redirect('questionnaire:BDI_refer')
                 r.set_cookie('user', username)
                 r.set_cookie('permission', 'T')
                 return r

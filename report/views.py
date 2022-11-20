@@ -13,3 +13,6 @@ def report(request):
         'SB_score': int(users.SB_score)
     }
     return render(request,'report.html', context)
+
+def resources_refer(request):
+    return redirect('resources:resource')
