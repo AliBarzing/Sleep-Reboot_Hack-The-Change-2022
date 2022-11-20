@@ -5,7 +5,11 @@ from manager.models import user, SB_questionnaire
 from datetime import datetime
 
 def stop_bang_refer(request):
-    return render(request, 'stop_bang.html')
+    users = user.objects.filter(username=request.COOKIES.get('user'))[0] #This gets the information of the participant
+    context = {
+        'user_name':users.username,
+    }
+    return render(request, 'stop_bang.html',context)
 
 def sb_results(request):
     score = 0
@@ -53,6 +57,7 @@ def BDI_refer(request):
     users = user.objects.filter(username=request.COOKIES.get('user'))[0] #This gets the information of the participant
     #context_dict = {'firstname': users.firstname, 'weight': users.weight, 'height':users.height}
     context = {
+        'user_name':users.username,
         'firstname': users.firstname,
         'BMI': int(users.weight)**2/(int(users.height)/100)
     }
@@ -74,6 +79,7 @@ def BDI_results(request):
 def ISI_refer(request):
     users = user.objects.filter(username=request.COOKIES.get('user'))[0] #This gets the information of the participant
     context = {
+        'user_name':users.username,
         'firstname': users.firstname,
         'BMI': int(users.weight)**2/(int(users.height)/100)
     }

@@ -1,5 +1,8 @@
 ﻿<!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
+{% block title %}Ramzii- Gorups{% endblock %}
+{% block body %}
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,8 +15,8 @@
     <h1>Hi {{firstname}}</h1>
     <h2> Here is the summary report of the result of the questionnaires </h2>
 
-    <p>Total score of <b>Beck Depression Inventory (Index) </b> is <mark><em>{{BDI_score}}</em> out of 66</mark> </p>
-    <p>Total score of <b>Insomnia Severity Index </b> is <mark><em>{{ISI_score}}</em> out of 28</mark></p>
+    <p>Total score of <b>Beck Depression Inventory (Index) </b> is <mark><em>{{BDI_score}}</em> out of 66</mark> → Your <u>estimated</u> level of depression is: <b>{{ BDI_str }}</b> </p>
+    <p>Total score of <b>Insomnia Severity Index </b> is <mark><em>{{ISI_score}}</em> out of 28</mark> → Your <u>estimated</u> level of insomnia is: <b>{{ ISI_str }}</b></p>
     <p>Total score of <b>Stop Bang Questionnaire </b> is <mark><em>{{SB_score}}</em> out of 8</mark></p>
     <hr>
     <form action="/report/resources_refer">
@@ -23,6 +26,5 @@
     </form>
 </div> 
 
-</body>
-</html>
+{% endblock %}
 
