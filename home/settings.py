@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'mainapp',
     'register',
     'image',
-    'api'
+    'api',
+    'questionnaire'
 ]
 
 MIDDLEWARE = [

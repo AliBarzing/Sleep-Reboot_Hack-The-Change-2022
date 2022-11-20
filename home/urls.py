@@ -26,6 +26,8 @@ urlpatterns = [
     #image pages
     url(r'^picture/',include('image.urls',namespace='image')),
 
+    #Questionnaire page
+    url(r'^questionnaire/',include('questionnaire.urls',namespace='questionnaire')),
 
     url(r'^recognize/(?P<img>(.)*)$', views.recognize),
 
