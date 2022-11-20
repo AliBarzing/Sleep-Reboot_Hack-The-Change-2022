@@ -9,6 +9,7 @@ def report(request):
     context = {
         'firstname': users.firstname,
         'BDI_score': int(users.BDI_score),
-        'ISI_score': int(users.ISI_score)
+        'ISI_score': int(users.ISI_score),
+        'SB_score': int(users.SB_score)
     }
     return render(request,'report.html', context)

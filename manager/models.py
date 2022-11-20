@@ -8,13 +8,14 @@ class user(models.Model):
     firstname = models.CharField(max_length=1000)
     lastname = models.CharField(max_length=1000)
     gender = models.CharField(max_length=1000)
-    dateofbirth = models.CharField(max_length=1000)
     educationstatus = models.CharField(max_length=1000)
+    dateofbirth = models.CharField(max_length=1000)
     weight = models.CharField(max_length=1000)
     height = models.CharField(max_length=1000)
 
     BDI_score = models.CharField(max_length=1000)
     ISI_score = models.CharField(max_length=1000)
+    SB_score = models.CharField(max_length=1000)
     
     new_user = models.IntegerField(default=1)
 
@@ -26,7 +27,7 @@ class user(models.Model):
 
 
 class SB_questionnaire(models.Model):
-    def __init__(self, username) -> None:
+    def __init__(self, username, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.username = username
         self.snore = models.CharField(max_length=10)

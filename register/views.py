@@ -38,9 +38,9 @@ def complite(request):
     userObj = user.objects.filter(username=request.COOKIES.get('user'))[0]
     userObj.firstname = values[0].split('=')[1]
     userObj.lastname = values[1].split('=')[1]
-    userObj.gender = values[2].split('=')[1]
-    userObj.dataofbirth = values[3].split('=')[1]
+    userObj.gender = values[3].split('=')[1]
     userObj.educationstatus = values[4].split('=')[1]
+    userObj.dateofbirth = values[2].split('=')[1]
     userObj.weight = values[5].split('=')[1]
     userObj.height = values[6].split('=')[1]
     userObj.demography_entered()
