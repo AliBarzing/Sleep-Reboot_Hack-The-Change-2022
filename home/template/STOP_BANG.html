@@ -13,9 +13,8 @@
 
   <div class="container">
     <form action="/questionnaire/sb_results">
-      <h1>Hi {{firstname}}</h1>
-      <h2> Insomnia Severity Index </h2>
-      <p>Please find the following instructions. </p>
+      <h1>Stop Bang Questionnaire</h1>
+      <p>The Epworth Sleepiness Scale (ESS), Berlin Questionnaire (BQ), and STOP-Bang questionnaire are the most popular screening questionnaires used for the detection of patients at high risk for Obstructive Sleep Apnea OSA</p>
       <hr>
   
       <div class="row">
@@ -83,16 +82,18 @@
          </div>
       </div>
 
-      <div class="row"></div>
-        <div class="col-50">
-          <img src="../static/images/adams_apple.png" alt="Adams apple">
-        </div>
-      </div>
-  
-  
-      <hr>
       <div class="row">
-        <input type="submit" value="Submit">
+        <div class="row"></div>
+          <div class="col-25">
+            <label for="isi_q5"></label>
+          </div>
+          <div class="col-75">
+            <img src="../static/images/adams_apple.png" alt="Adams apple">
+            <hr>
+            <input type="submit" value="Submit">
+          </div>
+          <br><br>
+        </div>
       </div>
   
   </form>

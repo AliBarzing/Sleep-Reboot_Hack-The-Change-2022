@@ -25,11 +25,19 @@ def report(request):
 
     #ISI_SCORE classification
     if int(users.ISI_score) <=12:
-        isi_str = 'No clinically significant'
+        isi_str = 'Not clinically significant'
     elif int(users.ISI_score) <=21:
         isi_str = 'Clinically moderate'
     else:
         isi_str = 'Clinically severe'
+
+    #SB_SCORE classification
+    if int(users.SB_score) <= 1:
+        sb_str = 'Low'
+    elif int(users.ISI_score) <= 3:
+        sb_str = 'Moderate'
+    else:
+        sb_str = 'High'
 
     context = {
         'user_name':users.username,
@@ -38,8 +46,8 @@ def report(request):
         'ISI_score': int(users.ISI_score),
         'SB_score': int(users.SB_score),
         'BDI_str': bdi_str,
-        'ISI_str': isi_str
-
+        'ISI_str': isi_str,
+        'SB_str': sb_str
     }
 
     print(bdi_str)
