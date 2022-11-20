@@ -7,10 +7,14 @@ class user(models.Model):
     password = models.CharField(max_length=1000)
     firstname = models.CharField(max_length=1000)
     lastname = models.CharField(max_length=1000)
-    country = models.CharField(max_length=1000)
+    gender = models.CharField(max_length=1000)
+    dateofbirth = models.CharField(max_length=1000)
+    educationstatus = models.CharField(max_length=1000)
+    weight = models.CharField(max_length=1000)
+    height = models.CharField(max_length=1000)
 
     def __str__(self):
-        return 'username=' + self.username + ' password= ' + self.password
+        return 'username =' + self.username + ' password = ' + self.password + 'firstname = ' + self.firstname + 'lastname = ' + self.lastname + 'gender = '+ self.gender + 'datofbirth' + self.dateofbirth + 'educationstatus' + self.educationstatus + 'weight = ' + self.weight + 'height' + self.height
 
 
 class Group(models.Model):

@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
-
+from django.http import JsonResponse
 from manager.models import user
+from django.contrib.auth.models import User
 
 
 def registernew(request):
@@ -12,7 +13,25 @@ def chang_pass(request):
 
 
 def complete_info(request):
+    users = user.objects.filter(username=request.COOKIES.get('user'))[0] #This gets the information of the participant
+    print(users.weight)
     return render(request, 'register4.html')
+
+def STOP_BANG_refer(request):
+    users = user.objects.filter(username=request.COOKIES.get('user'))[0] #This gets the information of the participant
+    #context_dict = {'firstname': users.firstname, 'weight': users.weight, 'height':users.height}
+    context = {
+        'firstname': users.firstname,
+        'BMI': int(users.weight)**2/(int(users.height)/100)
+    }
+    return render(request,'STOP_BANG.html', context)
+
+def STOP_BANG_results(request):
+    inputs = request.get_full_path()
+    values = inputs.split('?')[1].split('&')
+    userObj = user.objects.filter(username=request.COOKIES.get('user'))[0]
+    userObj.firstname = values[0].split('=')[1]
+    userObj.lastname = values[1].split('=')[1]
 
 
 def changepassword(request):
@@ -36,8 +55,12 @@ def complite(request):
     userObj = user.objects.filter(username=request.COOKIES.get('user'))[0]
     userObj.firstname = values[0].split('=')[1]
     userObj.lastname = values[1].split('=')[1]
-    userObj.country = values[2].split('=')[1]
-    userObj.car = values[3].split('=')[1]
-    print(userObj.car)
+    userObj.gender = values[2].split('=')[1]
+    userObj.dataofbirth = values[3].split('=')[1]
+    userObj.educationstatus = values[4].split('=')[1]
+    userObj.weight = values[5].split('=')[1]
+    userObj.height = values[6].split('=')[1]
+
     userObj.save()
+    print(userObj.gender)
     return redirect('main_page')
