@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{% static './css/mystyleRegister3.css' %}">
+
+<body>
+
+<div class="container">
+    <h1>Hi {{firstname}}</h1>
+    <h2> Here is the summary report of the result of the questionnaires </h2>
+
+    <p>Total score of <b>Beck Depression Inventory (Index) </b> is <mark><em>{{BDI_score}}</em> out of 66</mark> </p>
+    <p>Total score of <b>Insomnia Severity Index </b> is <mark><em>{{ISI_score}}</em> out of 28</mark></p>
+
+    <hr>
+</div> 
+
+</body>
+</html>
+

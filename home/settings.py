@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'register',
     'image',
     'api',
-    'questionnaire'
+    'questionnaire',
+    'report'
 ]
 
 MIDDLEWARE = [

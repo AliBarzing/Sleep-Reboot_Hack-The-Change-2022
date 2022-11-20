@@ -29,6 +29,9 @@ urlpatterns = [
     #Questionnaire page
     url(r'^questionnaire/',include('questionnaire.urls',namespace='questionnaire')),
 
+    #Report page
+    url(r'^report/',include('report.urls',namespace='report')),
+
     url(r'^recognize/(?P<img>(.)*)$', views.recognize),
 
     url(r'^train/(?P<img>(.)*)$', views.train),
