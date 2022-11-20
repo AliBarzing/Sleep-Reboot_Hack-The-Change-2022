@@ -32,6 +32,7 @@ def report(request):
         isi_str = 'Clinically severe'
 
     context = {
+        'user_name':users.username,
         'firstname': users.firstname,
         'BDI_score': int(users.BDI_score),
         'ISI_score': int(users.ISI_score),

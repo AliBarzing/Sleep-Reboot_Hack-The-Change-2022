@@ -14,7 +14,8 @@ def chang_pass(request):
 
 def complete_info(request):
     users = user.objects.filter(username=request.COOKIES.get('user'))[0] #This gets the information of the participant
-    return render(request, 'demographic.html')
+    context = {'user_name':users.username}
+    return render(request, 'demographic.html',context)
 
 
 def changepassword(request):

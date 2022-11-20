@@ -22,34 +22,14 @@
     {#        <div class="navbar-header">#}
     {##}
     {#        </div>#}
-            <div class="navbar-header">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavBar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="{% url 'manager:index' %}">Ramzii</a>
-            </div>
             <!-- Items -->
             <div class="collapse navbar-collapse" id="topNavBar">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'manager:index' %}">
-                            <span class="fa fa-user" aria-hidden="true"></span>&nbsp;
-                            Main page
-                        </a>
-                    </li>
-                </ul>
                 <ul class="navbar-nav  navbar-right">
-
-                    <li class="">
-                        <a class="nav-link" href="{% url 'main_page' %}">
-                            <span class="fa fa-adjust" aria-hidden="true"></span>&nbsp;
-                            Settings
-                        </a>
-                    </li>
+                   
                     <li class="">
                         <label class="nav-link" href="#">
                             <span class="fa fa-user" aria-hidden="true"></span>&nbsp;
-                            {{ user_name }}
+                            Welcome {{ user_name }}!
                         </label>
                     </li>
                     <li class="">
