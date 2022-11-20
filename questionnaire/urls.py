@@ -5,7 +5,7 @@ import questionnaire.views as questionnaire_views
 app_name = 'questionnaire'
 urlpatterns = [
     # new stop bang questionnaire
-    url(r'^stop_bang', questionnaire_views.stop_bang_new, name='stop_bang_new'),
+    url(r'^stop_bang$', questionnaire_views.stop_bang_new, name='stop_bang_new'),
 
     #new BDI questionnaire
     url(r'^BDI$', questionnaire_views.BDI_refer, name='BDI_refer'),

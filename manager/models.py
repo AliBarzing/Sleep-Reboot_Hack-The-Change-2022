@@ -15,13 +15,19 @@ class user(models.Model):
 
     BDI_score = models.CharField(max_length=1000)
     ISI_score = models.CharField(max_length=1000)
+    
+    new_user = models.IntegerField(default=1)
 
+    def demography_entered(self):
+        self.new_user = 0
+        
     def __str__(self):
         return 'username =' + self.username + ' password = ' + self.password + 'firstname = ' + self.firstname + 'lastname = ' + self.lastname + 'gender = '+ self.gender + 'datofbirth' + self.dateofbirth + 'educationstatus' + self.educationstatus + 'weight = ' + self.weight + 'height' + self.height + 'BDI_score' + self.BDI_score + 'ISI_score' + self.ISI_score
 
 
 class SB_questionnaire(models.Model):
     def __init__(self, username) -> None:
+        super().__init__(*args, **kwargs)
         self.username = username
         self.snore = models.CharField(max_length=10)
         self.tired = models.CharField(max_length=10)

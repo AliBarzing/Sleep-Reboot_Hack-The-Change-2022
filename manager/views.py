@@ -87,7 +87,7 @@ def sign_up(request, i):
                     newuser.username = values[0].split('=')[1]
                     newuser.password = values[1].split('=')[1]
                     newuser.save()
-                    r = redirect(views.new)
+                    r = redirect('register:complete_info')
                     r.set_cookie('user', newuser.username)
                     r.set_cookie('permission', 'T')
                     return r
@@ -117,13 +117,15 @@ def login(request, i):
     for users in all_users:
         if users.username == username:
             if users.password == passw:
-                r = redirect('manager:index')
+                if users.new_user == 1:
+                    r = redirect('register:complete_info')
+                else:
+                    r = redirect('manager:index')
                 r.set_cookie('user', username)
                 r.set_cookie('permission', 'T')
                 return r
             else:
                 return redirect('index')
-    return redirect('index')
 
 
 def logout(request):

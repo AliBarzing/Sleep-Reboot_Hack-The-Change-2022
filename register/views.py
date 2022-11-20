@@ -43,6 +43,7 @@ def complite(request):
     userObj.educationstatus = values[4].split('=')[1]
     userObj.weight = values[5].split('=')[1]
     userObj.height = values[6].split('=')[1]
+    userObj.demography_entered()
 
     userObj.save()
     print(userObj.gender)
