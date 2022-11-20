@@ -34,7 +34,7 @@ def report(request):
     #SB_SCORE classification
     if int(users.SB_score) <= 1:
         sb_str = 'Low'
-    elif int(users.ISI_score) <= 3:
+    elif int(users.SB_score) <= 3:
         sb_str = 'Moderate'
     else:
         sb_str = 'High'
