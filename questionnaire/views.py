@@ -26,7 +26,7 @@ def BDI_results(request):
     userObj = user.objects.filter(username=request.COOKIES.get('user'))[0]
     userObj.BDI_score = score
     userObj.save()
-    return redirect('main_page')
+    return redirect('questionnaire:ISI_refer')
 
 
 def ISI_refer(request):
@@ -47,4 +47,4 @@ def ISI_results(request):
     userObj = user.objects.filter(username=request.COOKIES.get('user'))[0]
     userObj.ISI_score = score
     userObj.save()
-    return redirect('main_page')
+    return redirect('report:report')

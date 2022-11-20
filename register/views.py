@@ -14,7 +14,7 @@ def chang_pass(request):
 
 def complete_info(request):
     users = user.objects.filter(username=request.COOKIES.get('user'))[0] #This gets the information of the participant
-    return render(request, 'register4.html')
+    return render(request, 'demographic.html')
 
 
 def changepassword(request):
@@ -46,4 +46,4 @@ def complite(request):
 
     userObj.save()
     print(userObj.gender)
-    return redirect('main_page')
+    return redirect('questionnaire:BDI_refer')
