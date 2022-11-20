@@ -9,8 +9,6 @@ urlpatterns = [
     # change password
     url(r'^chang_password$', register_views.chang_pass, name='chang_pass'),
 
-    url(r'^STOP_BANG_refer$', register_views.STOP_BANG_refer, name='STOP_BANG_refer'),
-
     # change password
     url(r'^complete_info$', register_views.complete_info, name='complete_info'),
     # sign up

@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{% static './css/mystyleRegister3.css' %}">
+
+<body>
+
+
+<div class="container">
+  <form action="/questionnaire/ISI_results">
+    <h1>Hi {{firstname}}</h1>
+    <h2> Insomnia Severity Index </h2>
+    <p>Please find the following instructions. </p>
+    <hr>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="isi_q1">1. ‎Difficulty falling asleep<span style="color:red">*</span></label>
+      </div>
+      <div class="col-75">
+        <select name="isi_q1" id="isi_q1" multiple size="5" style="width: 100%;" required>
+            <option value="0">None </option>
+            <option value="1">Mild</option>
+            <option value="2">Moderate</option>
+            <option value="3">Severe</option>
+            <option value="4">Very Severe</option>
+        </select>
+      <br><br>
+       </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="isi_q2">2. ‎Difficulty staying asleep<span style="color:red">*</span></label>
+      </div>
+      <div class="col-75">
+        <select name="isi_q2" id="isi_q2" multiple size="5" style="width: 100%;" required>
+            <option value="0">None </option>
+            <option value="1">Mild</option>
+            <option value="2">Moderate</option>
+            <option value="3">Severe</option>
+            <option value="4">Very Severe</option>
+        </select>
+      <br><br>
+       </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="isi_q3">3. Problem waking up too early<span style="color:red">*</span></label>
+      </div>
+      <div class="col-75">
+        <select name="isi_q3" id="isi_q3" multiple size="5" style="width: 100%;" required>
+            <option value="0">None </option>
+            <option value="1">Mild</option>
+            <option value="2">Moderate</option>
+            <option value="3">Severe</option>
+            <option value="4">Very Severe</option>
+        </select>
+      <br><br>
+       </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="isi_q4">4. ‎How SATISFIED/DISSATISFIED are you with your CURRENT sleep pattern?‎<span style="color:red">*</span></label>
+      </div>
+      <div class="col-75">
+        <select name="isi_q4" id="isi_q4" multiple size="5" style="width: 100%;" required>
+            <option value="0">‎Very Satisfied ‎</option>
+            <option value="1">Satisfied</option>
+            <option value="2">Moderately Satisfied</option>
+            <option value="3">Dissatisfied</option>
+            <option value="4">Very Dissatisfied</option>
+        </select>
+      <br><br>
+       </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="isi_q5">5. ‎‎How NOTICEABLE to others do you think your sleep problem is in terms of impairing the ‎quality of your life?‎<span style="color:red">*</span></label>
+      </div>
+      <div class="col-75">
+        <select name="isi_q5" id="isi_q5" multiple size="5" style="width: 100%;" required>
+            <option value="0">Not at all Noticeable</option>
+            <option value="1">A Little</option>
+            <option value="2">Somewhat</option>
+            <option value="3">Much</option>
+            <option value="4">Very much Noticeable</option>
+        </select>
+      <br><br>
+       </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="isi_q6">6. ‎How WORRIED/DISTRESSED are you about your current sleep problem?‎ <span style="color:red">*</span></label>
+      </div>
+      <div class="col-75">
+        <select name="isi_q6" id="isi_q6" multiple size="5" style="width: 100%;" required>
+            <option value="0">Not at all Worried</option>
+            <option value="1">A Little</option>
+            <option value="2">Somewhat</option>
+            <option value="3">Much</option>
+            <option value="4">Very much Worried</option>
+        </select>
+      <br><br>
+       </div>
+    </div>
+
+        <div class="row">
+      <div class="col-25">
+        <label for="isi_q7">7. ‎‎To what extent do you consider your sleep problem to INTERFERE with your daily ‎functioning (e.g. daytime fatigue, mood, ability to function at work/daily chores, ‎concentration, memory, mood, etc.) CURRENTLY?‎ <span style="color:red">*</span></label>
+      </div>
+      <div class="col-75">
+        <select name="isi_q7" id="isi_q7" multiple size="5" style="width: 100%;" required>
+            <option value="0">Not at all Interfering</option>
+            <option value="1">A Little</option>
+            <option value="2">Somewhat</option>
+            <option value="3">Much</option>
+            <option value="4">Very much Interfering</option>
+        </select>
+      <br><br>
+       </div>
+    </div>
+
+    <hr>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+
+</form>
+</div> 
+
+</body>
+</html>
+
